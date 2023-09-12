@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-#ifndef MAIN_H
-#define MAIN_H
-#include <stdio.h>
-
-int _putchar(char c);
-void print_alphabet(void);
-
-
-
-#endif
-=======
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
@@ -28,4 +16,3 @@ void print_to_98(int n);
 void print_times_table(int n);
 
 #endif /* HOLBERTON_H */
->>>>>>> origin/master
