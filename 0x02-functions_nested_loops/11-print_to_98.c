@@ -1,52 +1,40 @@
+#include <stdio.h>
 #include "main.h"
-
 /**
-  * print_times_table - Prints a multiplication table up to param
-  * @n: The number to be treated
-  *
-  * Return: Number matrix
-  */
-void print_times_table(int n)
+ * print_to_98 - a function that prints all natural numbers from n to 98
+ * user input's number prints to 98, regardless < 98 or > 98
+ * @n: number input
+ * Return: Always 0 (Success)
+ */
+void print_to_98(int n)
 {
-        int x, y, z;
-
-        if (n >= 0 && n <= 14)
-        {
-                for (x = 0; x <= n; x++)
-                {
-                        for (y = 0; y <= n; y++)
-                        {
-                                z = x * y;
-                                if (z > 99)
-                                {
-                                        _putchar(',');
-                                        _putchar(' ');
-                                        _putchar((z / 100) + '0');
-                                        _putchar(((z / 10) % 10) + '0');
-                                        _putchar((z % 10) + '0');
-                                }
-                                else if (z > 9)
-                                {
-                                        _putchar(',');
-                                        _putchar(' ');
-                                        _putchar(' ');
-                                        _putchar(((z / 10) % 10) + '0');
-                                        _putchar((z % 10) + '0');
-                                }
-                                else
-                                {
-                                        if (y != 0)
-                                        {
-                                                _putchar(',');
-                                                _putchar(' ');
-                                                _putchar(' ');
-                                                _putchar(' ');
-                                        }
-                                        _putchar(z + '0');
-                                }
-                        }
-                        _putchar('\n');
-                }
-        }
+	if (n < 98)
+	{
+		while (n <= 98)
+		{
+			printf("%d", n);
+			if (n != 98)
+			{
+				printf(", ");
+			}
+			n++;
+		}
+	}
+	else if (n > 98)
+	{
+		while (n >= 98)
+		{
+			printf("%d", n);
+			if (n != 98)
+			{
+				printf(", ");
+			}
+			n--;
+		}
+	}
+	else
+	{
+		printf("98");
+	}
+	printf("\n");
 }
-
