@@ -1,6 +1,10 @@
-#include <stdio.h>
-#include "my_functions.h"  /* Include the header file */
+#include "main.h"
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     print_number(98);
