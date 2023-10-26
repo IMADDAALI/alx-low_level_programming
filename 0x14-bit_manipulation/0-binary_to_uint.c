@@ -9,30 +9,30 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-    unsigned int result;
-    int length, weight;
+	unsigned int result;
+	int length, weight;
 
-    if (!b)
-        return (0);
+	if (!b)
+		return (0);
 
-    result = 0;
+	result = 0;
 
-    for (length = 0; b[length] != '\0'; length++)
-        ;
+	for (length = 0; b[length] != '\0'; length++)
+		;
 
-    for (length--, weight = 1; length >= 0; length--, weight *= 2)
-    {
-        if (b[length] != '0' && b[length] != '1')
-        {
-            return (0);
-        }
+	for (length--, weight = 1; length >= 0; length--, weight *= 2)
+	{
+		if (b[length] != '0' && b[length] != '1')
+		{
+			return (0);
+		}
 
-        if (b[length] & 1)
-        {
-            result += weight;
-        }
-    }
+		if (b[length] & 1)
+		{
+			result += weight;
+		}
+	}
 
-    return (result);
+	return (result);
 }
 
